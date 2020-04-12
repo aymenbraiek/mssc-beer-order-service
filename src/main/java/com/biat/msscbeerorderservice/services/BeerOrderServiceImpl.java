@@ -40,7 +40,7 @@ public class BeerOrderServiceImpl implements BeerOrderService{
 
 
     @Override
-    public BeerOrderPagedList listOrders(UUID customerId, java.awt.print.Pageable pageable) {
+    public BeerOrderPagedList listOrders(UUID customerId, PageRequest pageable) {
         Optional<Customer> customerOptional = customerRepository.findById(customerId);
 
         if (customerOptional.isPresent()) {

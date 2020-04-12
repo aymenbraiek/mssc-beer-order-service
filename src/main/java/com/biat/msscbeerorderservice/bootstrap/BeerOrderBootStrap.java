@@ -18,9 +18,11 @@ public class BeerOrderBootStrap implements CommandLineRunner {
     public static final String BEER_3_UPC = "0083783375213";
     private final CustomerRepository customerRepository;
 
+
+
     @Override
     public void run(String... args) throws Exception {
-
+        loadCustomerData();
     }
 
     private void loadCustomerData() {
@@ -30,5 +32,6 @@ public class BeerOrderBootStrap implements CommandLineRunner {
                     .apiKey(UUID.randomUUID())
                     .build());
         }
+        System.out.println("count"+customerRepository.count());
     }
 }

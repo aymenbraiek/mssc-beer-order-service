@@ -7,7 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
+
 import java.util.UUID;
 
 @RequestMapping("/api/v1/customers/{customerId}/")
@@ -36,7 +36,7 @@ public class BeerOrderController {
             pageSize = DEFAULT_PAGE_SIZE;
         }
 
-        return beerOrderService.listOrders(customerId, (Pageable) PageRequest.of(pageNumber, pageSize));
+        return beerOrderService.listOrders(customerId, PageRequest.of(pageNumber, pageSize));
     }
 
     @PostMapping("orders")
