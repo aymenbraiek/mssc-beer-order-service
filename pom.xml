@@ -13,9 +13,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>mssc-beer-order-service</name>
     <description>Beer Order Service</description>
-
-
-
     <dependencies>
 
         <dependency>
