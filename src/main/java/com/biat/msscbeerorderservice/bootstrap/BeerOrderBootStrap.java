@@ -23,7 +23,9 @@ public class BeerOrderBootStrap implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        loadCustomerData();
+        if(customerRepository.count()==0) {
+            loadCustomerData();
+        }
     }
 
     private void loadCustomerData() {
